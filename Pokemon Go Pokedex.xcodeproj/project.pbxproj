@@ -32,7 +32,7 @@
 		365CA0EA1D32F6FE00381F77 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		365CA0ED1D32F7A900381F77 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		365CA0EF1D33554C00381F77 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
-		365CA0F41D335E9100381F77 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		365CA0F41D335E9100381F77 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonCell.swift; path = ../PokemonCell.swift; sourceTree = "<group>"; };
 		365CA0F61D33F38700381F77 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,6 @@
 		365CA0C91D32F5BB00381F77 = {
 			isa = PBXGroup;
 			children = (
-				365CA0F41D335E9100381F77 /* PokemonCell.swift */,
 				365CA0D41D32F5BB00381F77 /* Pokemon Go Pokedex */,
 				365CA0D31D32F5BB00381F77 /* Products */,
 			);
@@ -82,6 +81,7 @@
 		365CA0EC1D32F7A300381F77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				365CA0F41D335E9100381F77 /* PokemonCell.swift */,
 				365CA0ED1D32F7A900381F77 /* Pokemon.swift */,
 			);
 			name = Model;
