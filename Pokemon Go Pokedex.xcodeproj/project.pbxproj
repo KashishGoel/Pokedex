@@ -18,6 +18,7 @@
 		365CA0F01D33554C00381F77 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA0EF1D33554C00381F77 /* MaterialView.swift */; };
 		365CA0F51D335E9100381F77 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA0F41D335E9100381F77 /* PokemonCell.swift */; };
 		365CA0F71D33F38700381F77 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA0F61D33F38700381F77 /* csv.swift */; };
+		365CA0FC1D34132A00381F77 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365CA0FB1D34132A00381F77 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		365CA0EF1D33554C00381F77 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		365CA0F41D335E9100381F77 /* PokemonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PokemonCell.swift; path = ../PokemonCell.swift; sourceTree = "<group>"; };
 		365CA0F61D33F38700381F77 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
+		365CA0FB1D34132A00381F77 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				365CA0F41D335E9100381F77 /* PokemonCell.swift */,
 				365CA0ED1D32F7A900381F77 /* Pokemon.swift */,
+				365CA0FB1D34132A00381F77 /* Extensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				365CA0DE1D32F5BB00381F77 /* Pokemon_Go_Pokedex.xcdatamodeld in Sources */,
 				365CA0F71D33F38700381F77 /* csv.swift in Sources */,
 				365CA0EE1D32F7A900381F77 /* Pokemon.swift in Sources */,
+				365CA0FC1D34132A00381F77 /* Extensions.swift in Sources */,
 				365CA0F01D33554C00381F77 /* MaterialView.swift in Sources */,
 				365CA0D81D32F5BB00381F77 /* ViewController.swift in Sources */,
 				365CA0D61D32F5BB00381F77 /* AppDelegate.swift in Sources */,

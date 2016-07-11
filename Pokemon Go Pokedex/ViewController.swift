@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView:UITableView!
     
@@ -20,6 +21,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self
        
         parsePokemon()
+        pokemon.randomize()
+      
         // Do any additional setup after loading the view, typically from a nib.
     }
 
