@@ -36,6 +36,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PokemonCell") as? PokemonCell {
+            var pokemon = Pokemon(name: "Test", id: indexPath.row + 1)
+            
+            cell.configureCell(pokemon)
         return cell
         }
         
