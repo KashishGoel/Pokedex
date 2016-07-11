@@ -32,6 +32,9 @@
                             <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="aXK-Ma-mXN">
                                 <rect key="frame" x="0.0" y="45" width="560" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hU7-h0-d6d"/>
+                                </connections>
                             </searchBar>
                             <tabBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJ6-Bg-9J7">
                                 <rect key="frame" x="0.0" y="551" width="600" height="49"/>
@@ -267,6 +270,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="aXK-Ma-mXN" id="6Nx-t0-e8D"/>
                         <outlet property="tableView" destination="Vxc-Xc-ffX" id="nUx-EO-rdN"/>
                     </connections>
                 </viewController>

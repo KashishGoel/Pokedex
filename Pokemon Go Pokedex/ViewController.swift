@@ -9,30 +9,35 @@ import Foundation
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView:UITableView!
-    
+    @IBOutlet weak var searchBar:UISearchBar!
     var pokemon = [Pokemon]()
-
+    var pokemonFilter = [Pokemon]()
+    var isSearching = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         tableView.delegate = self
         tableView.dataSource = self
-       
+        searchBar.delegate = self
+        
+        searchBar.returnKeyType = UIReturnKeyType.Done
+        
         parsePokemon()
         pokemon.randomize()
-      
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     
     func parsePokemon(){
         
         let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")
         
         do {
-        let csv = try CSV(contentsOfURL: path!)
+            let csv = try CSV(contentsOfURL: path!)
             let rows = csv.rows
             
             for row in rows{
@@ -40,50 +45,87 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     let pokemon_ = Pokemon(name: pokeName, id: pokeId)
                     pokemon.append(pokemon_)
-                
+                    
                 }
-            
+                
             }
             
             
         } catch let error as NSError{
-       print(error.debugDescription)
-        
+            print(error.debugDescription)
+            
         }
         
-    
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pokemon.count
+        if isSearching == false {
+            return pokemon.count
+            
+        }
+        else {
+            return pokemonFilter.count
+            
+        }
+        
     }
-
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("PokemonCell") as? PokemonCell {
-//            let pokemon = Pokemon(name: "Test", id: indexPath.row + 1)
+            //            let pokemon = Pokemon(name: "Test", id: indexPath.row + 1)
+            let pokemon_:Pokemon!
+            if isSearching == false {
+                pokemon_ = pokemon[indexPath.row]
+                
+            }
+            else {
+                pokemon_ = pokemonFilter[indexPath.row]
+                
+            }
             
-            let pokemon_ = pokemon[indexPath.row + 1]
             
             cell.configureCell(pokemon_)
-        return cell
+            return cell
         }
-        
+            
         else {
-        
-        return UITableViewCell()
+            
+            return UITableViewCell()
         }
         
     }
     
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
+            view.endEditing(true)
+            tableView.reloadData()
+        }
+            
+        else {
+            isSearching = true
+            let search = searchBar.text!.lowercaseString
+            
+            pokemonFilter = pokemon.filter({$0.name.rangeOfString(search) != nil})
+            tableView.reloadData()
+            
+        }
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     
 }
 
