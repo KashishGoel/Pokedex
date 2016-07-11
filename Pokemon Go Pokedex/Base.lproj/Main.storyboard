@@ -175,10 +175,16 @@
                                         <exclude reference="vPq-2j-UJM"/>
                                     </mask>
                                 </variation>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="89" width="360" height="462"/>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
                                         <exclude reference="H78-GD-J6y"/>
                                     </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="20" y="89" width="760" height="462"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="OZH-c9-glf"/>
@@ -272,11 +278,33 @@
                     <connections>
                         <outlet property="searchBar" destination="aXK-Ma-mXN" id="6Nx-t0-e8D"/>
                         <outlet property="tableView" destination="Vxc-Xc-ffX" id="nUx-EO-rdN"/>
+                        <segue destination="AaQ-PO-OtB" kind="popoverPresentation" identifier="showDetails" popoverAnchorView="Vxc-Xc-ffX" id="gJ5-kS-GrX">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273" y="350"/>
+            <point key="canvasLocation" x="265.5" y="408.75"/>
+        </scene>
+        <!--Pokemon Details-->
+        <scene sceneID="j7j-Gi-P5u">
+            <objects>
+                <viewController storyboardIdentifier="PokemonDetails" id="AaQ-PO-OtB" customClass="PokemonDetails" customModule="Pokemon_Go_Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7s9-F9-XM5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zzi-o5-Tyn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="igZ-dX-lwN">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="540"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fqn-Io-PDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="408.75"/>
         </scene>
     </scenes>
     <resources>

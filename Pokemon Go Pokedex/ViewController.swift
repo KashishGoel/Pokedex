@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var searchBar:UISearchBar!
     var pokemon = [Pokemon]()
@@ -77,6 +77,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard : UIStoryboard = UIStoryboard(
+            name: "Main",
+            bundle: nil)
+        let vc:PokemonDetails = storyboard.instantiateViewControllerWithIdentifier("PokemonDetails") as! PokemonDetails
+        vc.preferredContentSize = CGSizeMake(300, 300)
+        vc.modalPresentationStyle = UIModalPresentationStyle.Popover
+        vc.popoverPresentationController?.delegate = self
+        vc.popoverPresentationController?.sourceView = self.view
+        vc.popoverPresentationController?.sourceRect = CGRectMake(100, 100, 0, 0)
+        vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+        self.presentViewController(vc, animated: true, completion: nil)
         
     }
     
@@ -127,6 +138,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         searchBar.resignFirstResponder()
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetails" {
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
 }
 
 
