@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 20
     }
 
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -43,8 +43,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         else {
-            
-        return tableView.dequeueReusableCellWithIdentifier("PokemonCell") as! PokemonCell!
+        
+        return UITableViewCell()
         }
         
     }
