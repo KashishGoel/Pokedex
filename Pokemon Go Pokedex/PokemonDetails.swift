@@ -10,7 +10,8 @@ import UIKit
 
 class PokemonDetails: UIViewController {
     var pokemon:Pokemon!
+    
     override func viewDidLoad() {
-        
+        //print(pokemon.name)
     }
 }

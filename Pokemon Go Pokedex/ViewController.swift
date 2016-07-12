@@ -100,7 +100,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        
 //        
 //        vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
-        self.performSegueWithIdentifier("showDetails", sender: self)
+        let pokemon_:Pokemon!
+        if isSearching == false {
+            pokemon_ = pokemon[indexPath.row]
+            
+        }
+        else {
+            pokemon_ = pokemonFilter[indexPath.row]
+            
+        }
+    dispatch_async(dispatch_get_main_queue()) { 
+        self.performSegueWithIdentifier("showDetails", sender: pokemon_)
+        }
+        
         //self.presentViewController(vc, animated: true, completion: nil)
         
     }
@@ -160,12 +172,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //            popoverViewController.popoverPresentationController!.delegate = self
             
             if let vc = segue.destinationViewController as? PokemonDetails{
+                
+                
                 vc.preferredContentSize = CGSizeMake(tableView.frame.width-25, tableView.frame.height - 25)
                 vc.modalPresentationStyle = UIModalPresentationStyle.Popover
                 vc.popoverPresentationController?.delegate = self
                 vc.popoverPresentationController?.sourceView = tableView
                 vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(tableView.bounds), CGRectGetMidY(tableView.bounds),0,0)
                 vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+                if let pokemon = sender as? Pokemon{
+                    vc.pokemon = pokemon
+                }
 
             
             }
