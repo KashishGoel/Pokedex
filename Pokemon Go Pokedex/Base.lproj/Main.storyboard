@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokemon_Go_Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Pokemon_Go_Pokedex" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -23,8 +23,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2H-kw-870">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2H-kw-870">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <color key="barTintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem id="lDX-A7-9RE"/>
                                 </items>
@@ -276,6 +278,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="navBar" destination="S2H-kw-870" id="Pgk-km-JWE"/>
                         <outlet property="searchBar" destination="aXK-Ma-mXN" id="6Nx-t0-e8D"/>
                         <outlet property="tableView" destination="Vxc-Xc-ffX" id="nUx-EO-rdN"/>
                         <segue destination="AaQ-PO-OtB" kind="popoverPresentation" identifier="showDetails" popoverAnchorView="Vxc-Xc-ffX" id="gJ5-kS-GrX">

@@ -15,9 +15,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var pokemon = [Pokemon]()
     var pokemonFilter = [Pokemon]()
     var isSearching = false
+    @IBOutlet weak var navBar: UINavigationBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let img = UIImage()
+        navBar.shadowImage = img
+        navBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -27,6 +34,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         parsePokemon()
         pokemon.randomize()
+        
+        
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -81,11 +91,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             name: "Main",
             bundle: nil)
         let vc:PokemonDetails = storyboard.instantiateViewControllerWithIdentifier("PokemonDetails") as! PokemonDetails
-        vc.preferredContentSize = CGSizeMake(300, 300)
+        vc.preferredContentSize = CGSizeMake(tableView.frame.width-25, tableView.frame.height - 25)
         vc.modalPresentationStyle = UIModalPresentationStyle.Popover
         vc.popoverPresentationController?.delegate = self
-        vc.popoverPresentationController?.sourceView = self.view
-        vc.popoverPresentationController?.sourceRect = CGRectMake(100, 100, 0, 0)
+        vc.popoverPresentationController?.sourceView = tableView
+        vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(tableView.bounds), CGRectGetMidY(tableView.bounds),0,0)
+        
+        
         vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
         self.presentViewController(vc, animated: true, completion: nil)
         
