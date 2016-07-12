@@ -87,19 +87,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let storyboard : UIStoryboard = UIStoryboard(
-            name: "Main",
-            bundle: nil)
-        let vc:PokemonDetails = storyboard.instantiateViewControllerWithIdentifier("PokemonDetails") as! PokemonDetails
-        vc.preferredContentSize = CGSizeMake(tableView.frame.width-25, tableView.frame.height - 25)
-        vc.modalPresentationStyle = UIModalPresentationStyle.Popover
-        vc.popoverPresentationController?.delegate = self
-        vc.popoverPresentationController?.sourceView = tableView
-        vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(tableView.bounds), CGRectGetMidY(tableView.bounds),0,0)
-        
-        
-        vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
-        self.presentViewController(vc, animated: true, completion: nil)
+//        let storyboard : UIStoryboard = UIStoryboard(
+//            name: "Main",
+//            bundle: nil)
+//        
+//        let vc:PokemonDetails = storyboard.instantiateViewControllerWithIdentifier("PokemonDetails") as! PokemonDetails
+//        vc.preferredContentSize = CGSizeMake(tableView.frame.width-25, tableView.frame.height - 25)
+//        vc.modalPresentationStyle = UIModalPresentationStyle.Popover
+//        vc.popoverPresentationController?.delegate = self
+//        vc.popoverPresentationController?.sourceView = tableView
+//        vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(tableView.bounds), CGRectGetMidY(tableView.bounds),0,0)
+//        
+//        
+//        vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+        self.performSegueWithIdentifier("showDetails", sender: self)
+        //self.presentViewController(vc, animated: true, completion: nil)
         
     }
     
@@ -153,9 +155,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetails" {
-            let popoverViewController = segue.destinationViewController as! UIViewController
-            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
-            popoverViewController.popoverPresentationController!.delegate = self
+//            let popoverViewController = segue.destinationViewController as! UIViewController
+//            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+//            popoverViewController.popoverPresentationController!.delegate = self
+            
+            if let vc = segue.destinationViewController as? PokemonDetails{
+                vc.preferredContentSize = CGSizeMake(tableView.frame.width-25, tableView.frame.height - 25)
+                vc.modalPresentationStyle = UIModalPresentationStyle.Popover
+                vc.popoverPresentationController?.delegate = self
+                vc.popoverPresentationController?.sourceView = tableView
+                vc.popoverPresentationController?.sourceRect = CGRectMake(CGRectGetMidX(tableView.bounds), CGRectGetMidY(tableView.bounds),0,0)
+                vc.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.init(rawValue: 0)
+
+            
+            }
         }
     }
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
