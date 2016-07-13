@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+public let pokemonTypeColor = ["Water":0x4993C2, "Grass":0x9CCA58, "Poison":0xB881C7, "Fire":0xFB7D33, "Bug":0x739E45, "Electric":0xEDD447, "Ground":0xAA9748, "Fairy":0xFCBAE8, "Fighting":0xD3672E, "Psychic":0xF169B8, "Flying":0x9DAFF5, "Rock":0xBCA45F, "Steel":0xADADC5, "Ice":0x60CEE5, "Ghost":0x6365B3, "Dragon":0x7C6DCA, "Normal ":0x696763, ]
+
 extension Array{
     
     mutating func randomize(){

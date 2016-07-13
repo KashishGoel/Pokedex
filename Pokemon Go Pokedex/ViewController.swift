@@ -21,9 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let img = UIImage()
-        navBar.shadowImage = img
-        navBar.setBackgroundImage(img, forBarMetrics: UIBarMetrics.Default)
+        
         
         
         
@@ -34,7 +32,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         searchBar.returnKeyType = UIReturnKeyType.Done
         
         parsePokemon()
-        pokemon.randomize()
+        //pokemon.randomize()
+        for poke in pokemon{
+        print(poke.name)
+        }
         
     
         
@@ -46,7 +47,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     
     func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
-            navItem.title = ""
+        dispatch_async(dispatch_get_main_queue()) {
+            self.navItem.title = "PokeHelper"
+            self.navigationController?.navigationBar.barTintColor = UIColor(hex: 0xF81F22)
+
+        }
         
     }
     
@@ -59,13 +64,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let rows = csv.rows
             
             for row in rows{
-                print(row["Type_1"])
-                print(row["Type_2"])
+//                print(row["Type_1"])
+//                print(row["Type_2"])
                 if let pokeId = Int(row["id"]!), pokeName = row["identifier"], firstType = row["Type_1"], secondType = row["Type_2"]{
                     
-                    let pokemon_ = Pokemon(name: pokeName, id: pokeId, type1: firstType, type2: secondType)
+                    let pokemon_ = Pokemon(name: pokeName.capitalizedString, id: pokeId, type1: firstType.capitalizedString, type2: secondType.capitalizedString)
                     pokemon.append(pokemon_)
-                    
+                                        
                 }
                 
             }
@@ -123,6 +128,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.performSegueWithIdentifier("showDetails", sender: pokemon_)
         }
         navItem.title = pokemon_.name.capitalizedString
+         self.navigationController?.navigationBar.barTintColor = UIColor(hex: pokemonTypeColor[pokemon_.type1.capitalizedString]!)
         
         //self.presentViewController(vc, animated: true, completion: nil)
         
@@ -163,7 +169,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         else {
             isSearching = true
-            let search = searchBar.text!.lowercaseString
+            let search = searchBar.text!
             
             pokemonFilter = pokemon.filter({$0.name.rangeOfString(search) != nil})
             tableView.reloadData()
