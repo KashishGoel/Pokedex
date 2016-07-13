@@ -98,24 +98,22 @@
                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                             <color key="backgroundColor" red="0.83921568629999999" green="0.25098039220000001" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Water" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1h-yr-Jig" customClass="MaterialLabel" customModule="Pokemon_Go_Pokedex" customModuleProvider="target">
                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpe-s3-Tma" customClass="MaterialLabel" customModule="Pokemon_Go_Pokedex" customModuleProvider="target">
                                                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                                            <color key="backgroundColor" red="0.27450980390000002" green="0.50980392159999999" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
-                                                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                                <rect key="frame" x="152" y="48" width="164" height="21"/>
-                                                            </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ivysaur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Puo-TE-DDt">
                                                             <rect key="frame" x="107" y="8" width="475" height="21"/>
@@ -260,6 +258,7 @@
                                                         </constraint>
                                                         <constraint firstItem="wpe-s3-Tma" firstAttribute="top" secondItem="Puo-TE-DDt" secondAttribute="bottom" id="n3f-QZ-AdF"/>
                                                         <constraint firstAttribute="trailing" secondItem="x1h-yr-Jig" secondAttribute="trailing" constant="63" id="n3g-dz-eJl"/>
+                                                        <constraint firstItem="wpe-s3-Tma" firstAttribute="leading" secondItem="eeB-S0-ecq" secondAttribute="trailing" constant="34" id="oaj-ba-1Gj"/>
                                                         <constraint firstItem="fRz-TC-Zxi" firstAttribute="top" secondItem="Puo-TE-DDt" secondAttribute="bottom" id="zLR-OS-EPb"/>
                                                     </constraints>
                                                     <variation key="default">
@@ -281,6 +280,7 @@
                                                             <exclude reference="Wi5-qF-1bf"/>
                                                             <exclude reference="ava-10-tnN"/>
                                                             <exclude reference="n3f-QZ-AdF"/>
+                                                            <exclude reference="oaj-ba-1Gj"/>
                                                             <exclude reference="0uy-yI-j3N"/>
                                                             <exclude reference="5fi-7i-yuP"/>
                                                             <exclude reference="A6b-1x-LJm"/>
@@ -323,6 +323,7 @@
                                                             <exclude reference="Wi5-qF-1bf"/>
                                                             <include reference="ava-10-tnN"/>
                                                             <include reference="n3f-QZ-AdF"/>
+                                                            <include reference="oaj-ba-1Gj"/>
                                                             <include reference="0uy-yI-j3N"/>
                                                             <include reference="5fi-7i-yuP"/>
                                                             <include reference="A6b-1x-LJm"/>
@@ -382,6 +383,7 @@
                                         <connections>
                                             <outlet property="img" destination="eeB-S0-ecq" id="3Kh-xX-4Gj"/>
                                             <outlet property="name" destination="Puo-TE-DDt" id="mHw-t2-ZtH"/>
+                                            <outlet property="soloType" destination="wpe-s3-Tma" id="bDG-H1-k5x"/>
                                             <outlet property="type1" destination="fRz-TC-Zxi" id="e8j-Ka-q79"/>
                                             <outlet property="type2" destination="x1h-yr-Jig" id="m0d-fq-K9Y"/>
                                         </connections>
