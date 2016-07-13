@@ -13,7 +13,6 @@ class Pokemon{
 
     private var _name:String!
     private var _id:Int!
-
     
     var name:String {
         return _name

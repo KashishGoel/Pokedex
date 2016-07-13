@@ -1,0 +1,152 @@
+id,identifier,species_id,order,Evol_Candy,Evolves_Into,Type_1,Type_2,height,weight,Move_1,,,is_default
+1,bulbasaur,1,1,25,Ivysaur,Grass,Poison,7,69,,,,1
+2,ivysaur,2,2,100,Venusaur,Grass,Poison,10,130,,,,1
+3,venusaur,3,3,,Final Stage,Grass,Poison,20,1000,,,,1
+4,charmander,4,5,25,Charmeleon,Fire,,6,85,,,,1
+5,charmeleon,5,6,100,Charizard,Fire,,11,190,,,,1
+6,charizard,6,7,,Final Stage,Fire,Flying,17,905,,,,1
+7,squirtle,7,10,25,Wartortle,Water,,5,90,,,,1
+8,wartortle,8,11,50,Blastoise,Water,,10,225,,,,1
+9,blastoise,9,12,,Final Stage,Water,,16,855,,,,1
+10,caterpie,10,14,12,Metapod,Bug,,3,29,,,,1
+11,metapod,11,15,50,Butterfree,Bug,,7,99,,,,1
+12,butterfree,12,16,,Final Stage,Bug,Flying,11,320,,,,1
+13,weedle,13,17,12,Kakuna,Bug,Poison,3,32,,,,1
+14,kakuna,14,18,50,Beedrill,Bug,Poison,6,100,,,,1
+15,beedrill,15,19,,Final Stage,Bug,Poison,10,295,,,,1
+16,pidgey,16,20,12,Pidgeotto,Normal ,Flying,3,18,,,,1
+17,pidgeotto,17,21,50,Pidgeot,Normal ,Flying,11,300,,,,1
+18,pidgeot,18,22,50,Final Stage,Normal ,Flying,15,395,,,,1
+19,rattata,19,23,25,Raticate,Normal ,,3,35,,,,1
+20,raticate,20,24,,Final Stage,Normal ,,7,185,,,,1
+21,spearow,21,25,50,Fearow,Normal ,Flying,3,20,,,,1
+22,fearow,22,26,,Final Stage,Normal ,Flying,12,380,,,,1
+23,ekans,23,27,50,Arbok,Poison,,20,69,,,,1
+24,arbok,24,28,,Final Stage,Poison,,35,650,,,,1
+25,pikachu,25,30,50,Raichu,Electric,,4,60,,,,1
+26,raichu,26,31,,Final Stage,Electric,,8,300,,,,1
+27,sandshrew,27,32,50,Sanslash,Ground,,6,120,,,,1
+28,sandslash,28,33,,Final Stage,Ground,,10,295,,,,1
+29,nidoran-f,29,34,25,Nidorina,Poison,,4,70,,,,1
+30,nidorina,30,35,100,Nidoqueen,Poison,,8,200,,,,1
+31,nidoqueen,31,36,,Final Stage,Poison,Ground,13,600,,,,1
+32,nidoran-m,32,37,25,Nidorino,Poison,,5,90,,,,1
+33,nidorino,33,38,100,Nidoking,Poison,,9,195,,,,1
+34,nidoking,34,39,,Final Stage,Poison,Ground,14,620,,,,1
+35,clefairy,35,41,50,Clefable,Normal ,,6,75,,,,1
+36,clefable,36,42,,Final Stage,Normal ,,13,400,,,,1
+37,vulpix,37,43,50,Ninetales,Fire,,6,99,,,,1
+38,ninetales,38,44,,Final Stage,Fire,,11,199,,,,1
+39,jigglypuff,39,46,50,Wigglytuff,Normal ,,5,55,,,,1
+40,wigglytuff,40,47,,Final Stage,Normal ,,10,120,,,,1
+41,zubat,41,48,50,Golbat,Poison,Flying,8,75,,,,1
+42,golbat,42,49,,Final Stage,Poison,Flying,16,550,,,,1
+43,oddish,43,51,25,Gloom,Grass,Poison,5,54,,,,1
+44,gloom,44,52,100,Vileplume,Grass,Poison,8,86,,,,1
+45,vileplume,45,53,,Final Stage,Grass,Poison,12,186,,,,1
+46,paras,46,55,50,Parasect,Bug,Grass,3,54,,,,1
+47,parasect,47,56,,Final Stage,Bug,Grass,10,295,,,,1
+48,venonat,48,57,50,Venomoth,Bug,Poison,10,300,,,,1
+49,venomoth,49,58,,Final Stage,Bug,Poison,15,125,,,,1
+50,diglett,50,59,50,Dugtrio,Ground,,2,8,,,,1
+51,dugtrio,51,60,,Final Stage,Ground,,7,333,,,,1
+52,meowth,52,61,50,Final Stage,Normal ,,4,42,,,,1
+53,persian,53,62,,Final Stage,Normal ,,10,320,,,,1
+54,psyduck,54,63,50,Golduck,Water,,8,196,,,,1
+55,golduck,55,64,,Final Stage,Water,,17,766,,,,1
+56,mankey,56,65,50,Primeape,Fighting,,5,280,,,,1
+57,primeape,57,66,,Final Stage,Fighting,,10,320,,,,1
+58,growlithe,58,67,50,Arcanine,Fire,,7,190,,,,1
+59,arcanine,59,68,,Final Stage,Fire,,19,1550,,,,1
+60,poliwag,60,69,25,Poliwhirl,Water,,6,124,,,,1
+61,poliwhirl,61,70,100,Poliwrath,Water,,10,200,,,,1
+62,poliwrath,62,71,,Final Stage,Water,Fighting,13,540,,,,1
+63,abra,63,73,25,Kadabra,Psychic,,9,195,,,,1
+64,kadabra,64,74,100,Alakazam,Psychic,,13,565,,,,1
+65,alakazam,65,75,,Final Stage,Psychic,,15,480,,,,1
+66,machop,66,77,25,Machoke,Fighting,,8,195,,,,100
+67,machoke,67,78,100,Machamp,fighting,,15,705,,,,1
+68,machamp,68,79,,Final Stage,fighting,,16,1300,,,,1
+69,bellsprout,69,80,25,Weepinbell,Grass,Poison,7,40,,,,1
+70,weepinbell,70,81,100,Victreebel,Grass,Poison,10,64,,,,1
+71,victreebel,71,82,,Final Stage,Grass,Poison,17,155,,,,1
+72,tentacool,72,83,50,Tentaruel,Water,Poison,9,455,,,,1
+73,tentacruel,73,84,,Final Stage,Water,Poison,16,550,,,,1
+74,geodude,74,85,25,Graveler,Rock,Ground,4,200,,,,1
+75,graveler,75,86,100,Golem,Rock,Ground,10,1050,,,,1
+76,golem,76,87,,Final Stage,Rock,Ground,14,3000,,,,1
+77,ponyta,77,88,50,Rapidash,Fire,,10,300,,,,1
+78,rapidash,78,89,,Final Stage,Fire,,17,950,,,,1
+79,slowpoke,79,90,50,Slowbro,Water,Psychic,12,360,,,,1
+80,slowbro,80,91,,Final Stage,Water,Psychic,16,785,,,,1
+81,magnemite,81,93,50,Mangeton,Electric,Steel,3,60,,,,1
+82,magneton,82,94,,Final Stage,Electric,Steel,10,600,,,,1
+83,farfetchd,83,96,,Final Stage,Normal ,Flying,8,150,,,,1
+84,doduo,84,97,50,Dodrio,Normal ,Flying,14,392,,,,1
+85,dodrio,85,98,,Final Stage,Normal ,Flying,18,852,,,,1
+86,seel,86,99,50,Dewgong,Water,,11,900,,,,1
+87,dewgong,87,100,,Final Stage,Water,Ice,17,1200,,,,1
+88,grimer,88,101,50,Muk,Poison,,9,300,,,,1
+89,muk,89,102,,Final Stage,Poison,,12,300,,,,1
+90,shellder,90,103,50,Cloyster,Water,,3,40,,,,1
+91,cloyster,91,104,,Final Stage,Water,Ice,15,1325,,,,1
+92,gastly,92,105,25,Haunter,Ghost,Poison,13,1,,,,1
+93,haunter,93,106,100,Gengar,Ghost,Poison,16,1,,,,1
+94,gengar,94,107,,Final Stage,Ghost,Poison,15,405,,,,1
+95,onix,95,109,,Final Stage,Rock,Ground,88,2100,,,,1
+96,drowzee,96,111,50,Hypno,Psychic,,10,324,,,,1
+97,hypno,97,112,,Final Stage,Psychic,,16,756,,,,1
+98,krabby,98,113,50,Kingler,Water,,4,65,,,,1
+99,kingler,99,114,,Final Stage,Water,,13,600,,,,1
+100,voltorb,100,115,50,Electrode,Electric,,5,104,,,,1
+101,electrode,101,116,,Final Stage,Electric,,12,666,,,,1
+102,exeggcute,102,117,50,Exeggutor,,,4,25,,,,1
+103,exeggutor,103,118,,Final Stage,,,20,1200,,,,1
+104,cubone,104,119,50,Marowak,,,4,65,,,,1
+105,marowak,105,120,,Final Stage,,,10,450,,,,1
+106,hitmonlee,106,122,,Hitmonchan,,,15,498,,,,1
+107,hitmonchan,107,123,,Final Stage,,,14,502,,,,1
+108,lickitung,108,125,,Lickilicky,,,12,655,,,,1
+109,koffing,109,127,50,Weezing,,,6,10,,,,1
+110,weezing,110,128,,Final Stage,,,12,95,,,,1
+111,rhyhorn,111,129,50,Rhydon,,,10,1150,,,,1
+112,rhydon,112,130,,Final Stage,,,19,1200,,,,1
+113,chansey,113,133,,Blissey,,,11,346,,,,1
+114,tangela,114,135,,Tangrowth,,,10,350,,,,1
+115,kangaskhan,115,137,,Final Stage,,,22,800,,,,1
+116,horsea,116,139,50,Seadra,,,4,80,,,,1
+117,seadra,117,140,,Final Stage,,,12,250,,,,1
+118,goldeen,118,142,50,Seaking,,,6,150,,,,1
+119,seaking,119,143,,Final Stage,,,13,390,,,,1
+120,staryu,120,144,50,Starmie,,,8,345,,,,1
+121,starmie,121,145,,Final Stage,,,11,800,,,,1
+122,mr-mime,122,147,,Final Stage,,,13,545,,,,1
+123,scyther,123,148,,Final Stage,,,15,560,,,,1
+124,jynx,124,152,,Final Stage,,,14,406,,,,1
+125,electabuzz,125,154,,Final Stage,,,11,300,,,,1
+126,magmar,126,157,,Final Stage,,,13,445,,,,1
+127,pinsir,127,159,,Final Stage,,,15,550,,,,1
+128,tauros,128,161,,Final Stage,,,14,884,,,,1
+129,magikarp,129,162,400,Gyarados,,,9,100,,,,1
+130,gyarados,130,163,,Final Stage,,,65,2350,,,,1
+131,lapras,131,165,,Final Stage,,,25,2200,,,,1
+132,ditto,132,166,,Final Stage,,,3,40,,,,1
+133,eevee,133,167,25,Multiple,,,3,65,,,,1
+134,vaporeon,134,168,,Final Stage,,,10,290,,,,1
+135,jolteon,135,169,,Final Stage,,,8,245,,,,1
+136,flareon,136,170,,Final Stage,,,9,250,,,,1
+137,porygon,137,176,,Porygon2,,,8,365,,,,1
+138,omanyte,138,179,50,Omastar,,,4,75,,,,1
+139,omastar,139,180,,Final Stage,,,10,350,,,,1
+140,kabuto,140,181,50,Kabutops,,,5,115,,,,1
+141,kabutops,141,182,,Final Stage,,,13,405,,,,1
+142,aerodactyl,142,183,,Final Stage,,,18,590,,,,1
+143,snorlax,143,186,,Final Stage,,,21,4600,,,,1
+144,articuno,144,187,,Final Stage,,,17,554,,,,1
+145,zapdos,145,188,,Final Stage,,,16,526,,,,1
+146,moltres,146,189,,Final Stage,,,20,600,,,,1
+147,dratini,147,190,25,Dragonair,,,18,33,,,,1
+148,dragonair,148,191,100,Dragonite,,,40,165,,,,1
+149,dragonite,149,192,,Final Stage,,,22,2100,,,,1
+150,mewtwo,150,193,,Final Stage,,,20,1220,,,,1
+151,mew,151,196,,Final Stage,,,4,40,,,,1

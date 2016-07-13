@@ -12,6 +12,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIPopoverPresentationControllerDelegate {
     @IBOutlet weak var tableView:UITableView!
     @IBOutlet weak var searchBar:UISearchBar!
+    @IBOutlet weak var navItem:UINavigationItem!
     var pokemon = [Pokemon]()
     var pokemonFilter = [Pokemon]()
     var isSearching = false
@@ -35,12 +36,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         parsePokemon()
         pokemon.randomize()
         
+    
         
         
         
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+   
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+            navItem.title = ""
+        
+    }
     
     func parsePokemon(){
         
@@ -112,6 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     dispatch_async(dispatch_get_main_queue()) { 
         self.performSegueWithIdentifier("showDetails", sender: pokemon_)
         }
+        navItem.title = pokemon_.name.capitalizedString
         
         //self.presentViewController(vc, animated: true, completion: nil)
         
