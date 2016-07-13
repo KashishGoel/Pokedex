@@ -382,6 +382,8 @@
                                         <connections>
                                             <outlet property="img" destination="eeB-S0-ecq" id="3Kh-xX-4Gj"/>
                                             <outlet property="name" destination="Puo-TE-DDt" id="mHw-t2-ZtH"/>
+                                            <outlet property="type1" destination="fRz-TC-Zxi" id="e8j-Ka-q79"/>
+                                            <outlet property="type2" destination="x1h-yr-Jig" id="m0d-fq-K9Y"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

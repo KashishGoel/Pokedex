@@ -11,6 +11,9 @@ import UIKit
 class PokemonCell: UITableViewCell {
     @IBOutlet weak var img:UIImageView!
     @IBOutlet weak var name:UILabel!
+    @IBOutlet weak var type1:UILabel!
+    @IBOutlet weak var type2:UILabel!
+    @IBOutlet weak var soloType:UILabel!
  
     
     var pokemon: Pokemon!
@@ -22,6 +25,13 @@ class PokemonCell: UITableViewCell {
         
         name.text = self.pokemon.name.capitalizedString
         img.image = UIImage(named: "\(self.pokemon.id)")
+        if self.pokemon.type2 != "" {
+        type2.text = pokemon.type2
+        type1.text = pokemon.type1}
+        
+        else{
+        
+        }
         
     }
     

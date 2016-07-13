@@ -52,16 +52,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func parsePokemon(){
         
-        let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")
+        let path = NSBundle.mainBundle().pathForResource("pokego", ofType: "csv")
         
         do {
             let csv = try CSV(contentsOfURL: path!)
             let rows = csv.rows
             
             for row in rows{
-                if let pokeId = Int(row["id"]!), pokeName = row["identifier"]{
+                print(row["Type_1"])
+                print(row["Type_2"])
+                if let pokeId = Int(row["id"]!), pokeName = row["identifier"], firstType = row["Type_1"], secondType = row["Type_2"]{
                     
-                    let pokemon_ = Pokemon(name: pokeName, id: pokeId)
+                    let pokemon_ = Pokemon(name: pokeName, id: pokeId, type1: firstType, type2: secondType)
                     pokemon.append(pokemon_)
                     
                 }
